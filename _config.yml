@@ -23,7 +23,7 @@ slogan: Colorantes y auxiliares
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Descripción de la actividad realizada por Neochem
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "neochem" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Exclude from processing.
