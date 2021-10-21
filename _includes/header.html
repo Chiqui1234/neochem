@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neochem | Colorantes y auxiliares</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/header-menu.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- CSS for templates -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="css/notification.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+    <header id="header" class="{{ page.headerClass }}{{ layout.headerClass }}">
+        <div class="logo">
+            <a href="{{ site.url }}"></a>
+        </div>
+        <ul id="nav" class="removeMobile minimal inline">
+            <li>
+                <a href="{{ site.url }}/#contact">CONTACTO</a>
+            </li>
+            <li class="trigger">
+                <a href="{{ site.url }}/colorantes">COLORANTES</a>
+                {% include megaMenu/colorantes.html %}
+            </li>
+            <li class="trigger">
+                <a href="{{ site.url }}/auxiliares">AUXILIARES</a>
+                {% include megaMenu/auxiliares.html %}
+            </li>
+        </ul>
+        <div class="menu removeDesktop">
+            <a class="row cf" onclick="toggleSidebar()">
+                <div class="three col">
+                    <div id="hamburger" class="hamburger" style="padding-top: 5px">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </a>
+        </div>
+    </header>
+    <nav id="sidebar">
+
+    </nav>
+    <script src="js/headerCtrl.js"></script>
+    <script src="js/sidebarCtrl.js"></script>

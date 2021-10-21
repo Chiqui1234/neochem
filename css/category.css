@@ -1,0 +1,24 @@
+section#wallpaperForCategory {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    background: var(--red) center / cover;
+    z-index: 5;
+}
+section#wallpaperForCategory.Colorantes {
+    background-image: url('../img/wallpaper/telas-colores-básicos-suaves-fhd.webp');
+}
+section#wallpaperForCategory.Auxiliares {
+    background-image: url('../img/wallpaper/chemical-mix-fhd.webp');
+}
+#categoryData ul {
+    padding: 0;
+}
+#categoryData ul li.grid-2 {
+    grid-template-columns: 150px auto;
+}
+#categoryData h2 .anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}

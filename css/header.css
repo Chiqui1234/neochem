@@ -1,0 +1,121 @@
+header {
+    width: 100%;
+    height: 80px;
+    /* padding: var(--gap-xxl); */
+    padding: var(--gap-xxl) var(--gap-xxl) 0 var(--gap-xl);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border-radius: 0 0 var(--gap) var(--gap);
+    transition: all var(--animation-timing) ease-out;
+    z-index: 10;
+}
+header.alt {
+    background: var(--white-alt);
+    /* padding: var(--gap-xl); */
+    padding: var(--gap-xl) 30px 0 0;
+}
+header .logo {
+    float: left;
+    width: 214px; /* 60% of original size */
+    height: 50px; /* 60% of original size */
+    /* background: url('../img/logo.png') center / 100%; */
+    background: url('../img/logo.svg') center / 100%;
+    filter: invert(100%) sepia(11%) saturate(7455%) hue-rotate(198deg) brightness(114%) contrast(109%);
+    transition: all var(--animation-timing-sm) ease-out;
+}
+header.alt .logo, header.darkLogo .logo {
+    filter: invert(13%) sepia(31%) saturate(6295%) hue-rotate(218deg) brightness(85%) contrast(114%);
+}
+header .logo a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* Nav for desktop */
+header ul#nav {
+    width: calc(100% - 214px);
+    float: right;
+    clear: none;
+    margin-top: 5px;
+}
+header ul#nav li {
+    float: right;
+    margin-right: var(--gap);
+    position: relative;
+}
+header ul#nav li:first-child {
+    margin: 0;
+}
+header ul#nav li a {
+    font-family: "Poppins Semibold";
+    font-size: 24px;
+    padding-bottom: 1px;
+    border-bottom: 2px solid transparent;
+}
+header ul#nav li a:hover, header ul#nav li.trigger:hover a  {
+    color: var(--blue-alt);
+    border-color: var(--blue-alt);
+}
+/* MegaMenu */
+header.alt ul#nav li.trigger::after {
+    width: 100%;
+    height: 25px;
+    /* background: red; */
+    display: table;
+    content: "";
+}
+header ul#nav li.trigger:hover div#megaMenu {
+    display: table;
+}
+div#megaMenu {
+    width: 640px;
+    height: 212px;
+    top: 36px;
+    left: -320px;
+    position: absolute;
+    display: none;
+    background: var(--white-transparent);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px var(--shadow);
+}
+header.alt div#megaMenu {
+    top: 55px;
+}
+div#megaMenu .left {
+    width: 30%;
+    height: 212px;
+    background: url('https://i.blogs.es/3beac3/getsmart-screen-still/450_1000.jpg') center / cover no-repeat;
+}
+div#megaMenu .right {
+    width: 70%;
+    height: 212px;
+    padding: var(--gap-xxl) var(--gap-xl) var(--gap-xxl) var(--gap-xl);
+}
+div#megaMenu ul {
+    clear: none;
+}
+div#megaMenu ul.grid-2 {
+    grid-template-columns: 260px 145px;
+    text-align: left; /* overrides centered text heredado of .grid.center */
+}
+div#megaMenu ul li a {
+    font-size: 16px;
+    font-family: "Poppins Regular", sans-serif;
+    border: none;
+}
+div#megaMenu ul li a {
+    display: block;
+    width: 100%;
+    color: var(--black) !important;
+}
+div#megaMenu ul li a:hover {
+    padding-left: var(--gap);
+}
+/* Reponsive */
+@media (min-width: 1280px) {
+    header .logo {
+        filter: invert(13%) sepia(31%) saturate(6295%) hue-rotate(218deg) brightness(85%) contrast(114%);
+    }
+}

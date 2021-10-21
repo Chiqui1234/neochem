@@ -1,0 +1,26 @@
+---
+type: index
+---
+{% include header.html %}
+<section id="home">
+    <div id="wallpaper" class="grid center">
+        <div class="wrapper">
+            <div class="content">
+                <h1 class="upperCase">{{ site.slogan }}</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quisquam error velit mollitia placeat officia eaque impedit, perspiciatis expedita voluptatem, maiores qui!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <div class="center container">
+        <h2><a href="#contact">
+            Comunicate con nosotros
+            <span class="scrollMe">↓</span>
+        </a></h2>
+        {% include forms/contact.html %}
+    </div>
+</section>
+{% include footer.html %}

@@ -1,0 +1,25 @@
+<form action="{{ site.url }}/email">
+    <select>
+        <option selected disabled>Asunto</option>
+        <option value="">Necesito asesoramiento en Colorantes</option>
+        <option value="">Necesito asesoramiento en Auxiliares</option>
+    </select>
+    <input type="text" placeholder="Tu nombre completo">
+    <div class="grid-2 gap">
+        <input type="text" placeholder="Tu correo electrónico" />
+        <input type="number" placeholder="Tu teléfono" />
+    </div>
+    <div id="bodyMessage" class="grid-2 gap">
+        <textarea placeholder="Tu mensaje"></textarea>
+        <div style="position: relative">
+        <div class="wrapper">
+            <ul class="minimal">
+                <li>+54 11-2251-5262</li>
+                <li>Lun a Vie 09:00 / 17:00</li>
+            </ul>
+        </div>
+        <input type="submit" value="Enviar" class="submit" />
+        </div>
+    </div>
+    
+</form>

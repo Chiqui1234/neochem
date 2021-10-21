@@ -1,0 +1,20 @@
+---
+type: notification
+headerClass: darkLogo
+---
+<!-- Full screen notification -->
+{% include header.html %}
+<div id="notification" class="grid center">
+
+    <div class="container">
+        <div class="img"></div>
+        <div class="wrapper">
+            <h2>{{ page.title }}</h2>
+            <p>
+                {{ page.body }}
+            </p>
+        </div>
+    </div>
+
+</div>
+{% include footer.html %}

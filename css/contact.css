@@ -1,0 +1,70 @@
+section#contact {
+    background: var(--blue);
+    padding-bottom: var(--gap-xxl);
+}
+section#contact h2 {
+    color: var(--white);
+}
+#bodyMessage {
+    margin: var(--gap) 0 var(--gap) 0;
+}
+#bodyMessage textarea {
+    margin: 0;
+}
+#bodyMessage .wrapper {
+    color: var(--white);
+    background: var(--blue);
+    padding: var(--gap);
+    border: 1px solid var(--blue-alt);
+    border-radius: var(--gap-sm);
+    margin: var(--gap) 0 var(--gap) 0;
+}
+#bodyMessage .wrapper ul li {
+    color: var(--white);
+}
+input, select, textarea, button {
+    /* Erase default style */
+    outline: none;
+    border: none;
+    background: none;
+    /* Set new defaults */
+    border: 1px solid var(--blue-alt);
+    color: var(--white);
+    background: var(--blue);
+    padding: var(--gap);
+    font-family: "Poppins Regular", sans-serif;
+    font-size: 16px;
+    margin: var(--gap) 0 var(--gap) 0;
+    border-radius: var(--gap-sm);
+}
+input, select {
+    width: 100%;
+}
+textarea {
+    width: 100%;
+    min-width: calc(100% - 50px);
+    min-height: 150px;
+}
+input[type=submit], button {
+    cursor: pointer;
+    transition: background var(--animation-timing-sm) ease-out;
+}
+input[type=submit]:hover, button:hover {
+    background: var(--blue-alt);
+}
+/* Responsive */
+/* Reparar que el nro y horario es comido por el botón "enviar" */
+@media (min-width: 768px) {
+    #bodyMessage.grid-2 {
+        grid-template-columns: auto 250px;   
+    }
+    #bodyMessage .wrapper {
+        margin: 0;
+    }
+    #bodyMessage .submit {
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
