@@ -86,6 +86,16 @@ title: Colorantes
     <li>NEGRO NEOPLEX MDL 200%</li>
 </ul>
 <h2>
+    <span id="blancos-opticos" class="anchor"></span>
+    Blancos ópticos
+</h2>
+<ul class="minimal table">
+    <li>NEOWHITE HB supra conc</li>
+    <li>NEOWHITE 3B supra conc</li>
+    <li>NEOWHITE 2VB supra conc</li>
+    <li>NEOWHITE PES - 3B</li>
+</ul>
+<h2>
     <span id="basicos" class="anchor"></span>
     Básicos
 </h2>

@@ -1,25 +1,32 @@
-<form action="{{ site.url }}/email">
-    <select>
-        <option selected disabled>Asunto</option>
-        <option value="">Necesito asesoramiento en Colorantes</option>
-        <option value="">Necesito asesoramiento en Auxiliares</option>
-    </select>
-    <input type="text" placeholder="Tu nombre completo">
-    <div class="grid-2 gap">
-        <input type="text" placeholder="Tu correo electrónico" />
-        <input type="number" placeholder="Tu teléfono" />
+<form action="{{ site.url }}/email.html" method="post" id="contactHomePage">
+    <div id="subjectNameAndNumber" class="grid-3 gap">
+        <select id="subject" onchange="removeClass('subject', 'error')" >
+            <option selected disabled>Asunto</option>
+            <option value="">Necesito asesoramiento en Colorantes</option>
+            <option value="">Necesito asesoramiento en Auxiliares</option>
+        </select>
+        <input type="text" placeholder="Tu nombre completo" id="name" onchange="removeClass('name', 'error')" />
+        <input type="number" placeholder="Tu teléfono" id="telephone" onchange="removeClass('telephone', 'error')" />
+    </div>
+    <div id="emailAndCaptcha" class="grid-2 gap">
+        <input type="text" placeholder="Tu correo electrónico" id="email" onchange="removeClass('email', 'error')" />
+        <input type="number" id="captcha" title="Para asegurarnos que no sos un robot, debés resolver este cálculo" onchange="removeClass('captcha', 'error')" />
     </div>
     <div id="bodyMessage" class="grid-2 gap">
-        <textarea placeholder="Tu mensaje"></textarea>
+        <textarea placeholder="Tu mensaje" id="message" onchange="removeClass('message', 'error')" ></textarea>
         <div style="position: relative">
         <div class="wrapper">
             <ul class="minimal">
+                <h3>Atención al cliente</h3>
                 <li>+54 11-2251-5262</li>
                 <li>Lun a Vie 09:00 / 17:00</li>
             </ul>
         </div>
-        <input type="submit" value="Enviar" class="submit" />
+        <button type="button" class="submit" onclick="checkForm('contactHomePage')">Enviar</button>
         </div>
     </div>
-    
 </form>
+<script src="{{ site.url }}/js/email.js"></script>
+<script src="{{ site.url }}/js/class.js"></script>
+<script src="{{ site.url }}/js/captcha.js"></script>
+<script src="{{ site.url }}/js/index/captchaImplementation.js"></script>

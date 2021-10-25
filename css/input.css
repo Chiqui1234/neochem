@@ -1,0 +1,36 @@
+input, select, textarea, button {
+    /* Erase default style */
+    outline: none;
+    border: none;
+    background: none;
+    /* Set new defaults */
+    border: 1px solid var(--blue-alt);
+    color: var(--white);
+    background: var(--blue);
+    padding: var(--gap);
+    font-family: "Poppins Regular", sans-serif;
+    font-size: 16px;
+    margin: var(--gap) 0 var(--gap) 0;
+    border-radius: var(--gap-sm);
+    transition: all var(--animation-timing-sm) ease-out;
+}
+input, select, button {
+    width: 100%;
+}
+input:hover, select:hover, textarea:hover {
+    border-color: var(--skyblue);
+}
+input.error, select.error, button.error, textarea.error {
+    border: 1px solid var(--red);
+}
+textarea {
+    width: 100%;
+    min-width: calc(100% - 50px);
+    min-height: 150px;
+}
+input[type=submit], button {
+    cursor: pointer;
+}
+input[type=submit]:hover, button:hover {
+    background: var(--blue-alt);
+}

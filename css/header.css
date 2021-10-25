@@ -72,7 +72,7 @@ header ul#nav li.trigger:hover div#megaMenu {
 div#megaMenu {
     width: 640px;
     height: 212px;
-    top: 36px;
+    top: 34px;
     left: -320px;
     position: absolute;
     display: none;

@@ -38,7 +38,7 @@ title: Auxiliares
 </ul>
 <h2>
     <span id="antiquebraduras" class="anchor"></span>
-    Anti-Quebraduras
+    Antiquebraduras
 </h2>
 <ul class="minimal table">
     <li class="grid-2">
@@ -88,7 +88,7 @@ title: Auxiliares
     </li> 
     <li class="grid-2">
         <span>Neopon HR ECO</span>
-        <span>Humectante y detergente universal para todos los procesos de pretratamiento y tintura. Combinación de tensioactivos aniónicos y no iónicos. Baja espuma.</span>
+        <span>Humectante y detergente universal para todos los procesos de pretratamiento y tintura. Combinación de tensioactivos aniónicos y no iónicos. Baja espuma</span>
     </li>	
 </ul>
 <h2>
@@ -97,8 +97,12 @@ title: Auxiliares
 </h2>
 <ul class="minimal table">
     <li class="grid-2">
+        <span>DIFUSOR PES</span>
+        <span>Igualante para tintura de poliester con alto poder de difusion</span>
+    </li>
+    <li class="grid-2">
         <span>Neogal SP</span>
-        <span>Igualante combinado para colorantes directos con poder de retención.</span>
+        <span>Igualante combinado para colorantes directos con poder de retención</span>
     </li>
     <li class="grid-2">
         <span>Neogal NR</span>

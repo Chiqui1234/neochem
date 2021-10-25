@@ -8,6 +8,10 @@ section#contact h2 {
 #bodyMessage {
     margin: var(--gap) 0 var(--gap) 0;
 }
+#bodyMessage h3 {
+    color: var(--white);
+    margin: 0;
+}
 #bodyMessage textarea {
     margin: 0;
 }
@@ -22,40 +26,16 @@ section#contact h2 {
 #bodyMessage .wrapper ul li {
     color: var(--white);
 }
-input, select, textarea, button {
-    /* Erase default style */
-    outline: none;
-    border: none;
-    background: none;
-    /* Set new defaults */
-    border: 1px solid var(--blue-alt);
-    color: var(--white);
-    background: var(--blue);
-    padding: var(--gap);
-    font-family: "Poppins Regular", sans-serif;
-    font-size: 16px;
-    margin: var(--gap) 0 var(--gap) 0;
-    border-radius: var(--gap-sm);
-}
-input, select {
-    width: 100%;
-}
-textarea {
-    width: 100%;
-    min-width: calc(100% - 50px);
-    min-height: 150px;
-}
-input[type=submit], button {
-    cursor: pointer;
-    transition: background var(--animation-timing-sm) ease-out;
-}
-input[type=submit]:hover, button:hover {
-    background: var(--blue-alt);
+#bodyMessage textarea {
+    min-height: 175px;
 }
 /* Responsive */
 /* Reparar que el nro y horario es comido por el botón "enviar" */
 @media (min-width: 768px) {
-    #bodyMessage.grid-2 {
+    #subjectNameAndNumber.grid-3 {
+        grid-template-columns: auto auto 250px;
+    }
+    #bodyMessage.grid-2, #emailAndCaptcha.grid-2 {
         grid-template-columns: auto 250px;   
     }
     #bodyMessage .wrapper {
