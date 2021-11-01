@@ -1,7 +1,6 @@
 #wallpaper {
     width: 100vw;
-    /* height: 100vh; */
-    height: calc(100vh - 85px);
+    height: 100vh;
     background: url('../img/wallpaper/chemical-smoke-fhd.webp') center / cover;
     z-index: 5;
     -webkit-transform: scaleX(-1);
@@ -35,7 +34,7 @@
 #wallpaper div.content h1 {
     margin: 0;
 }
-#contact h2 a {
+#contacto h2 a {
     color: var(--white);
     text-decoration: none;
     border: none;
@@ -44,11 +43,14 @@
     font-weight: 500;
     margin: 20px 0 10px 0;
 }
-#contact h2 a span {
+#contacto h2 a span {
     margin-left: var(--gap-xl);
 }
 /* Responsive */
 @media (min-width: 1280px) {
+    #wallpaper {
+        height: calc(100vh - 85px);
+    }
     #wallpaper div.wrapper {
         max-width: calc( 100vw - 50px );
         top: 0;

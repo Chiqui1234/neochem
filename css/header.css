@@ -16,12 +16,15 @@ header.alt {
     /* padding: var(--gap-xl); */
     padding: var(--gap-xl) 30px 0 0;
 }
+header.topMargin {
+    /* when sidebar activates his .topMargin, header change border-radius */
+    border-radius: 0;
+}
 header .logo {
     float: left;
     width: 214px; /* 60% of original size */
     height: 50px; /* 60% of original size */
-    /* background: url('../img/logo.png') center / 100%; */
-    background: url('../img/logo.svg') center / 100%;
+    background: url('../img/logo.min.svg') center / 100%;
     filter: invert(100%) sepia(11%) saturate(7455%) hue-rotate(198deg) brightness(114%) contrast(109%);
     transition: all var(--animation-timing-sm) ease-out;
 }
@@ -42,7 +45,7 @@ header ul#nav {
 }
 header ul#nav li {
     float: right;
-    margin-right: var(--gap);
+    margin-right: var(--gap-xl);
     position: relative;
 }
 header ul#nav li:first-child {
@@ -88,6 +91,12 @@ div#megaMenu .left {
     height: 212px;
     background: url('https://i.blogs.es/3beac3/getsmart-screen-still/450_1000.jpg') center / cover no-repeat;
 }
+div#megaMenu .left.auxiliares {
+    background-image: url('../img/wallpaper/chemical-mix-fhd.webp');
+}
+div#megaMenu .left.colorantes {
+    background-image: url('../img/wallpaper/telas-colores-basicos-suaves-fhd.webp');
+}
 div#megaMenu .right {
     width: 70%;
     height: 212px;
@@ -113,7 +122,69 @@ div#megaMenu ul li a {
 div#megaMenu ul li a:hover {
     padding-left: var(--gap);
 }
+/* Responsive nav */
+nav#sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: calc(-50% - 5px); /* width - box-shadow blur */
+    background: var(--white-alt);
+    z-index: 9;
+    opacity: 0;
+    transition: all var(--animation-timing-sm) ease-out;
+    box-shadow: -5px 0 var(--gap) var(--shadow);
+}
+nav#sidebar.open {
+    right: 0;
+    opacity: 1;
+}
+nav#sidebar.topMargin {
+    height: calc(100% - 80px);
+    top: 80px;
+}
+nav#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav#sidebar.topMargin ul li {
+    height: calc(33vh - 80px / 3 + 5px);
+}
+nav#sidebar ul li {
+    width: 100%;
+    height: calc(33vh + 5px);
+    margin: 0;
+    background: var(--black) center / cover;
+}
+nav#sidebar ul li.auxiliares {
+    background-image: url('../img/wallpaper/chemical-mix-fhd.webp');
+}
+nav#sidebar ul li.colorantes {
+    background-image: url('../img/wallpaper/telas-colores-basicos-suaves-fhd.webp');
+}
+nav#sidebar ul li.contacto {
+    background-image: linear-gradient(0deg, var(--red) 0%, var(--pink) 100%);
+}
+nav#sidebar ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-family: "Poppins Semibold", sans-serif;
+    font-size: 20px;
+    color: var(--white);
+    text-shadow: 0 0 var(--gap) var(--shadow);
+}
 /* Reponsive */
+@media (min-width: 960px) {
+    header.topMargin {
+        /* when sidebar activates his .topMargin, header change border-radius */
+        border-radius: 0 0 0 var(--gap);
+    }
+    nav#sidebar {
+        width: 50%;
+    }
+}
 @media (min-width: 1280px) {
     header .logo {
         filter: invert(13%) sepia(31%) saturate(6295%) hue-rotate(218deg) brightness(85%) contrast(114%);

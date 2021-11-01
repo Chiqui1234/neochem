@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule auxiliares auxiliares.html
+RewriteRule colorantes colorantes.html
+RewriteRule enviar-email enviar-email.php

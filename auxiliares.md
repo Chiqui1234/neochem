@@ -4,7 +4,8 @@ title: Auxiliares
 ---
 <h2>
     <span id="limpieza-descrude-blanqueo" class="anchor"></span>
-    Limpieza, descrude y blanqueo
+    <span class="removeMobile-sm">Limpieza, descrude y blanqueo</span>
+    <span class="removeDesktop-sm">Limpieza y descrude</span>
 </h2>
 <ul class="minimal table">
     <li class="grid-2">

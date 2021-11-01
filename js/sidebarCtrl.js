@@ -1,12 +1,16 @@
 function toggleSidebar() {
-    let sidebarOpened = document.getElementById('sidebar').classList.length > 0 ? true : false;
+    // let sidebarOpened = document.getElementById('sidebar').classList.length > 1 ? true : false;
+    let sidebarOpened = checkIfClassExists('sidebar', 'open');
     if(sidebarOpened) {
         document.getElementById('sidebar').classList.remove('open');
         document.getElementById('hamburger').classList.remove('active');
+        
+        document.getElementById('header').classList.remove('topMargin');
         // sidebarLock = false;
     } else {
         document.getElementById('sidebar').classList.add('open');
         document.getElementById('hamburger').classList.add('active');
+        document.getElementById('header').classList.add('topMargin');
         // sidebarLock = true;
     }
     // if(document.getElementById('header').classList.length == 0)

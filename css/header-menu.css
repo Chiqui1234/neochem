@@ -44,6 +44,7 @@ header .menu {
     right: var(--gap-xxl);
     padding-top: 2.5px;
     transition: all var(--animation-timing) ease-out;
+    z-index: 12;
 }
 header.alt .menu {
     top: 12px;

@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neochem | Colorantes y auxiliares</title>
+    {% unless site.dev %}
+    <link rel="stylesheet" href="css/chunk.min.css" />
+    {% endunless %}
+    {% if site.dev %}
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/header.css" />
@@ -16,22 +20,24 @@
     <link rel="stylesheet" href="css/category.css" />
     <link rel="stylesheet" href="css/notification.css" />
     <link rel="stylesheet" href="css/contact.css" />
+    {% endif %}
 </head>
 <body>
-    <header id="header" class="{{ page.headerClass }}{{ layout.headerClass }}">
-        <div class="logo">
-            <a href="{{ site.url }}"></a>
+    <!-- <header id="header" class="{{ page.headerClass }}{{ layout.headerClass }}"> -->
+    <header id="header">
+        <div id="logo" class="logo">
+            <a href="{{ site.baseurl }}/"></a>
         </div>
         <ul id="nav" class="removeMobile minimal inline">
             <li>
-                <a href="{{ site.url }}/#contact">CONTACTO</a>
+                <a href="{{ site.baseurl }}/#contacto">CONTACTO</a>
             </li>
             <li class="trigger">
-                <a href="{{ site.url }}/colorantes">COLORANTES</a>
+                <a href="{{ site.baseurl }}/colorantes">COLORANTES</a>
                 {% include megaMenu/colorantes.html %}
             </li>
             <li class="trigger">
-                <a href="{{ site.url }}/auxiliares">AUXILIARES</a>
+                <a href="{{ site.baseurl }}/auxiliares">AUXILIARES</a>
                 {% include megaMenu/auxiliares.html %}
             </li>
         </ul>
@@ -46,8 +52,18 @@
             </a>
         </div>
     </header>
-    <nav id="sidebar">
-
+    <nav id="sidebar" class="removeDesktop">
+        <ul>
+            <li class="auxiliares">
+                <a href="{{ site.baseurl }}/auxiliares" class="grid center">AUXILIARES</a>
+            </li>
+            <li class="colorantes">
+                <a href="{{ site.baseurl }}/colorantes" class="grid center">COLORANTES</a>
+            </li>
+            <li class="contacto">
+                <a href="{{ site.baseurl }}/#contacto" class="grid center">CONTACTO</a>
+            </li>
+        </ul>
     </nav>
-    <script src="js/headerCtrl.js"></script>
-    <script src="js/sidebarCtrl.js"></script>
+    <script src="{{ site.baseurl }}/js/headerCtrl.js"></script>
+    <script src="{{ site.baseurl }}/js/sidebarCtrl.js"></script>

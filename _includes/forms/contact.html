@@ -1,19 +1,19 @@
-<form action="{{ site.url }}/email.html" method="post" id="contactHomePage">
+<form action="{{ site.baseurl }}/enviar-email.php" method="post" id="contactHomePage">
     <div id="subjectNameAndNumber" class="grid-3 gap">
-        <select id="subject" onchange="removeClass('subject', 'error')" >
+        <select id="subject" onchange="removeClass('subject', 'error')" name="subject">
             <option selected disabled>Asunto</option>
-            <option value="">Necesito asesoramiento en Colorantes</option>
-            <option value="">Necesito asesoramiento en Auxiliares</option>
+            <option value="colorantes">Necesito asesoramiento en Colorantes</option>
+            <option value="auxiliares">Necesito asesoramiento en Auxiliares</option>
         </select>
-        <input type="text" placeholder="Tu nombre completo" id="name" onchange="removeClass('name', 'error')" />
-        <input type="number" placeholder="Tu teléfono" id="telephone" onchange="removeClass('telephone', 'error')" />
+        <input type="text" placeholder="Tu nombre completo" id="name" onchange="removeClass('name', 'error')" name="name" />
+        <input type="number" placeholder="Tu teléfono" id="telephone" onchange="removeClass('telephone', 'error')" name="telephone" />
     </div>
     <div id="emailAndCaptcha" class="grid-2 gap">
-        <input type="text" placeholder="Tu correo electrónico" id="email" onchange="removeClass('email', 'error')" />
-        <input type="number" id="captcha" title="Para asegurarnos que no sos un robot, debés resolver este cálculo" onchange="removeClass('captcha', 'error')" />
+        <input type="text" placeholder="Tu correo electrónico" id="email" onchange="removeClass('email', 'error')" name="email" />
+        <input type="number" id="captcha" title="Para asegurarnos que no sos un robot, debés resolver este cálculo" onchange="removeClass('captcha', 'error')"/>
     </div>
     <div id="bodyMessage" class="grid-2 gap">
-        <textarea placeholder="Tu mensaje" id="message" onchange="removeClass('message', 'error')" ></textarea>
+        <textarea placeholder="Tu mensaje" id="message" onchange="removeClass('message', 'error')" name="message"></textarea>
         <div style="position: relative">
         <div class="wrapper">
             <ul class="minimal">
@@ -26,7 +26,7 @@
         </div>
     </div>
 </form>
-<script src="{{ site.url }}/js/email.js"></script>
-<script src="{{ site.url }}/js/class.js"></script>
-<script src="{{ site.url }}/js/captcha.js"></script>
-<script src="{{ site.url }}/js/index/captchaImplementation.js"></script>
+<script src="{{ site.baseurl }}/js/email.js"></script>
+<script src="{{ site.baseurl }}/js/class.js"></script>
+<script src="{{ site.baseurl }}/js/captcha.js"></script>
+<script src="{{ site.baseurl }}/js/index/captchaImplementation.js"></script>

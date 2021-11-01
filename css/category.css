@@ -5,7 +5,7 @@ section#wallpaperForCategory {
     z-index: 5;
 }
 section#wallpaperForCategory.Colorantes {
-    background-image: url('../img/wallpaper/telas-colores-básicos-suaves-fhd.webp');
+    background-image: url('../img/wallpaper/telas-colores-basicos-suaves-fhd.webp');
 }
 section#wallpaperForCategory.Auxiliares {
     background-image: url('../img/wallpaper/chemical-mix-fhd.webp');
