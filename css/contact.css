@@ -1,30 +1,29 @@
 section#contacto {
-    background: var(--blue);
+    /* background: var(--blue); */
+    background: var(--white);
     padding-bottom: var(--gap-xxl);
 }
-section#contacto h2 {
-    color: var(--white);
+section#contacto h2 a {
+    /* color: var(--white); */
+    color: var(--blue);
 }
 #bodyMessage {
     margin: var(--gap) 0 var(--gap) 0;
-}
-#bodyMessage h3 {
-    color: var(--white);
-    margin: 0;
 }
 #bodyMessage textarea {
     margin: 0;
 }
 #bodyMessage .wrapper {
-    color: var(--white);
-    background: var(--blue);
     padding: var(--gap);
     border: 1px solid var(--blue-alt);
     border-radius: var(--gap-sm);
     margin: var(--gap) 0 var(--gap) 0;
 }
+#bodyMessage .wrapper h3 {
+    margin: 0;
+}
 #bodyMessage .wrapper ul li {
-    color: var(--white);
+    color: var(--blue);
 }
 #bodyMessage textarea {
     min-height: 175px;

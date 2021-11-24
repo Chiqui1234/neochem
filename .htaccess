@@ -2,3 +2,15 @@ RewriteEngine On
 RewriteRule auxiliares auxiliares.html
 RewriteRule colorantes colorantes.html
 RewriteRule enviar-email enviar-email.php
+
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+<FilesMatch "\.(js|css|ico|pdf|jpg|jpeg|png|gif|php)$">
+SetOutputFilter DEFLATE
+Header unset Last-Modified
+Header set Cache-Control "max-age=31536050"
+</FilesMatch>
+
+Header unset ETag
+FileETag None

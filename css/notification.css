@@ -11,7 +11,8 @@
 #notification .container .img {
     width: 100%;
     height: 200px;
-    background: url('../img/different-colors.webp') center / cover;
+    /* background: url('../img/different-colors.webp') center / cover; */
+    background: url('../img/wallpaper/microfiber-paint-test.jpg') center / cover;
 }
 #notification .container .wrapper {
     padding: var(--gap-xxl);

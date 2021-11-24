@@ -54,7 +54,8 @@ html, body {
     /* Need to be complemented with article's tag */
     width: calc(100% - var(--gap-xxl) ) !important;
     margin: 100px auto 100px auto;
-    padding: var(--gap);
+    padding: var(--gap) var(--gap-xl) var(--gap) var(--gap-xl);
+    /* padding: var(--gap); */
     /* display: table; */
 }
 .container-xl {
@@ -94,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins Semibold', sans-serif;
     font-display: auto;
     font-weight: 500;
-    color: var(--black);
+    color: var(--blue);
     margin: 20px 0 10px 0;
 }
 /* Title styling for article's tag */

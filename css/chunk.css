@@ -55,7 +55,8 @@ html, body {
     /* Need to be complemented with article's tag */
     width: calc(100% - var(--gap-xxl) ) !important;
     margin: 100px auto 100px auto;
-    padding: var(--gap);
+    padding: var(--gap) var(--gap-xl) var(--gap) var(--gap-xl);
+    /* padding: var(--gap); */
     /* display: table; */
 }
 .container-xl {
@@ -95,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins Semibold', sans-serif;
     font-display: auto;
     font-weight: 500;
-    color: var(--black);
+    color: var(--blue);
     margin: 20px 0 10px 0;
 }
 /* Title styling for article's tag */
@@ -260,32 +261,31 @@ span.removeDesktop-sm, span.removeDesktop, span.removeDesktop-lg{
 
 /* Contact */
 section#contacto {
-    background: var(--blue);
+    /* background: var(--blue); */
+    background: var(--white);
     padding-bottom: var(--gap-xxl);
 }
-section#contacto h2 {
-    color: var(--white);
+section#contacto h2 a {
+    /* color: var(--white); */
+    color: var(--blue);
 }
 #bodyMessage {
     margin: var(--gap) 0 var(--gap) 0;
-}
-#bodyMessage h3 {
-    color: var(--white);
-    margin: 0;
 }
 #bodyMessage textarea {
     margin: 0;
 }
 #bodyMessage .wrapper {
-    color: var(--white);
-    background: var(--blue);
     padding: var(--gap);
     border: 1px solid var(--blue-alt);
     border-radius: var(--gap-sm);
     margin: var(--gap) 0 var(--gap) 0;
 }
+#bodyMessage .wrapper h3 {
+    margin: 0;
+}
 #bodyMessage .wrapper ul li {
-    color: var(--white);
+    color: var(--blue);
 }
 #bodyMessage textarea {
     min-height: 175px;
@@ -315,15 +315,15 @@ footer {
     width: 100vw;
     padding: var(--gap-xxl);
     border-top: 2px solid var(--blue-alt);
-    background: var(--blue);
+    background: var(--white);
 }
 footer p {
-    color: var(--white);
+    color: var(--blue);
 }
 footer a, footer a:hover {
     padding-bottom: 1px;
-    color: var(--white);
-    border-bottom: 2px solid var(--white);
+    color: var(--blue-alt);
+    border-bottom: 2px solid var(--blue-alt);
 }
 
 /* Grid */
@@ -367,13 +367,19 @@ footer a, footer a:hover {
 .hamburger .line{
     width: 50px;
     height: 3px;
-    background-color: var(--black);
+    background-color: var(--white);
     display: block;
     margin: 8px auto;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    }
+    box-shadow: 0 0 2px var(--black);
+}
+header.alt .hamburger .line {
+    background-color: var(--blue);
+    box-shadow: 0 0 2px transparent;
+    /* box-shadow: ; */
+}
 .hamburger:hover{
     cursor: pointer;
 }
@@ -446,7 +452,7 @@ header .logo {
     width: 214px; /* 60% of original size */
     height: 50px; /* 60% of original size */
     background: url('../img/logo.min.svg') center / 100%;
-    filter: invert(100%) sepia(11%) saturate(7455%) hue-rotate(198deg) brightness(114%) contrast(109%);
+    filter: invert(100%) sepia(11%) saturate(7455%) hue-rotate(198deg) brightness(114%) contrast(109%) drop-shadow(0 0 10px rgb(0 0 0 / 0.4));
     transition: all var(--animation-timing-sm) ease-out;
 }
 header.alt .logo, header.darkLogo .logo {
@@ -479,7 +485,11 @@ header ul#nav li a {
     border-bottom: 2px solid transparent;
 }
 header ul#nav li a:hover, header ul#nav li.trigger:hover a  {
-    color: var(--blue-alt);
+    /* color: var(--blue-alt); */
+    border-color: var(--white);
+}
+header.alt ul#nav li a:hover, header.alt ul#nav li.trigger:hover a  {
+    /* color: var(--blue-alt); */
     border-color: var(--blue-alt);
 }
 /* MegaMenu */
@@ -549,7 +559,7 @@ nav#sidebar {
     width: 100%;
     height: 100%;
     top: 0;
-    right: calc(-50% - 5px); /* width - box-shadow blur */
+    right: calc(-100% - 5px); /* width - box-shadow blur */
     background: var(--white-alt);
     z-index: 9;
     opacity: 0;
@@ -610,13 +620,21 @@ nav#sidebar ul li a {
     header .logo {
         filter: invert(13%) sepia(31%) saturate(6295%) hue-rotate(218deg) brightness(85%) contrast(114%);
     }
+    header ul#nav li a {
+        color: var(--white);
+        text-shadow: 0 0 var(--gap) var(--shadow);
+    }
+    header.alt ul#nav li a {
+        color: var(--blue);
+        text-shadow: 0 0 var(--gap) transparent;
+    }
 }
 
 /* Index */
 #wallpaper {
     width: 100vw;
     height: 100vh;
-    background: url('../img/wallpaper/chemical-smoke-fhd.webp') center / cover;
+    background: url('../img/wallpaper/microfiber-paint-test.webp') center / cover;
     z-index: 5;
     -webkit-transform: scaleX(-1);
     -moz-transform: scaleX(-1);
@@ -683,9 +701,8 @@ input, select, textarea, button {
     border: none;
     background: none;
     /* Set new defaults */
+    color: var(--blue);
     border: 1px solid var(--blue-alt);
-    color: var(--white);
-    background: var(--blue);
     padding: var(--gap);
     font-family: "Poppins Regular", sans-serif;
     font-size: 16px;
@@ -712,6 +729,18 @@ input[type=submit], button {
 }
 input[type=submit]:hover, button:hover {
     background: var(--blue-alt);
+    color: var(--white);
+}
+/* Hide arrows from input[number] */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* Notification */
@@ -728,7 +757,8 @@ input[type=submit]:hover, button:hover {
 #notification .container .img {
     width: 100%;
     height: 200px;
-    background: url('../img/different-colors.webp') center / cover;
+    /* background: url('../img/different-colors.webp') center / cover; */
+    background: url('../img/wallpaper/microfiber-paint-test.jpg') center / cover;
 }
 #notification .container .wrapper {
     padding: var(--gap-xxl);

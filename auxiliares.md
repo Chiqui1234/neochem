@@ -125,7 +125,7 @@ title: Auxiliares
     </li>
 </ul>
 <h2>
-    <span id="" class="anchor"></span>
+    <span id="fijadores" class="anchor"></span>
     Fijadores
 </h2>
 <ul class="minimal table">

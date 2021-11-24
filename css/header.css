@@ -25,7 +25,7 @@ header .logo {
     width: 214px; /* 60% of original size */
     height: 50px; /* 60% of original size */
     background: url('../img/logo.min.svg') center / 100%;
-    filter: invert(100%) sepia(11%) saturate(7455%) hue-rotate(198deg) brightness(114%) contrast(109%);
+    filter: invert(100%) sepia(11%) saturate(7455%) hue-rotate(198deg) brightness(114%) contrast(109%) drop-shadow(0 0 10px rgb(0 0 0 / 0.4));
     transition: all var(--animation-timing-sm) ease-out;
 }
 header.alt .logo, header.darkLogo .logo {
@@ -58,7 +58,11 @@ header ul#nav li a {
     border-bottom: 2px solid transparent;
 }
 header ul#nav li a:hover, header ul#nav li.trigger:hover a  {
-    color: var(--blue-alt);
+    /* color: var(--blue-alt); */
+    border-color: var(--white);
+}
+header.alt ul#nav li a:hover, header.alt ul#nav li.trigger:hover a  {
+    /* color: var(--blue-alt); */
     border-color: var(--blue-alt);
 }
 /* MegaMenu */
@@ -128,7 +132,7 @@ nav#sidebar {
     width: 100%;
     height: 100%;
     top: 0;
-    right: calc(-50% - 5px); /* width - box-shadow blur */
+    right: calc(-100% - 5px); /* width - box-shadow blur */
     background: var(--white-alt);
     z-index: 9;
     opacity: 0;
@@ -188,5 +192,13 @@ nav#sidebar ul li a {
 @media (min-width: 1280px) {
     header .logo {
         filter: invert(13%) sepia(31%) saturate(6295%) hue-rotate(218deg) brightness(85%) contrast(114%);
+    }
+    header ul#nav li a {
+        color: var(--white);
+        text-shadow: 0 0 var(--gap) var(--shadow);
+    }
+    header.alt ul#nav li a {
+        color: var(--blue);
+        text-shadow: 0 0 var(--gap) transparent;
     }
 }

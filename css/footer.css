@@ -2,13 +2,13 @@ footer {
     width: 100vw;
     padding: var(--gap-xxl);
     border-top: 2px solid var(--blue-alt);
-    background: var(--blue);
+    background: var(--white);
 }
 footer p {
-    color: var(--white);
+    color: var(--blue);
 }
 footer a, footer a:hover {
     padding-bottom: 1px;
-    color: var(--white);
-    border-bottom: 2px solid var(--white);
+    color: var(--blue-alt);
+    border-bottom: 2px solid var(--blue-alt);
 }

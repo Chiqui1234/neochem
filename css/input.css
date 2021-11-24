@@ -4,9 +4,8 @@ input, select, textarea, button {
     border: none;
     background: none;
     /* Set new defaults */
+    color: var(--blue);
     border: 1px solid var(--blue-alt);
-    color: var(--white);
-    background: var(--blue);
     padding: var(--gap);
     font-family: "Poppins Regular", sans-serif;
     font-size: 16px;
@@ -33,4 +32,16 @@ input[type=submit], button {
 }
 input[type=submit]:hover, button:hover {
     background: var(--blue-alt);
+    color: var(--white);
+}
+/* Hide arrows from input[number] */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
