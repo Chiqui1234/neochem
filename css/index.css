@@ -1,38 +1,40 @@
 #wallpaper {
     width: 100vw;
     height: 100vh;
-    background: url('../img/wallpaper/microfiber-paint-test.webp') center / cover;
-    z-index: 5;
-    -webkit-transform: scaleX(-1);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    transform: scaleX(-1); /* flip image */
+    /* background: #fff; */
+    position: relative;
 }
-#wallpaper div.wrapper {
-    /* max-width: calc( 100vw - 58px ); */ /* perfect with hamburguer menu */
-    max-width: calc( 100vw - 75px ); /* perfect with hamburguer menu */
+#wallpaper .wrapper.logo {
+    width: 100%;
+    height: 70px;
+    left: 0;
     position: absolute;
-    right: 0;
-    -webkit-transform: scaleX(-1);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    transform: scaleX(-1); /* re-flip text */
-    backdrop-filter: blur(5px);
-    background: var(--white-transparent);
-    padding: var(--gap-xxl); /* horizontal alignment with header's logo */
+    background: red;
+    z-index: 5;
 }
-#wallpaper div.content {
-    display: block;
-    float: left;
-    content: "";
+#wallpaper .floatingText {
+    z-index: 5;
+    bottom: var(--gap-xxl);
+    position: absolute;
+    width: 100%;
+    padding: var(--gap-xxl);
 }
-#wallpaper div.content h1, #wallpaper div.content p {
-    float: left;
-    clear: both;
-    text-align: left !important;
+#wallpaper .floatingText p {
+    font-size: 24px;
 }
-#wallpaper div.content h1 {
-    margin: 0;
+#wallpaper .floatingText p a {
+    font-size: 24px;
+}
+#wallpaper .video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#wallpaper .video video {
+    object-fit: cover;
 }
 #contacto h2 a {
     color: var(--white);

@@ -1,4 +1,4 @@
-input, select, textarea, button {
+input, select, textarea, button, .button{
     /* Erase default style */
     outline: none;
     border: none;
@@ -44,4 +44,18 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/* Extra buttons */
+.button.modded {
+    border: none;
+    background: var(--white-transparent);
+    backdrop-filter: blur(2px);
+    box-shadow: 2px 2px 0 var(--skyblue),
+    4px 4px 0 var(--violet);
+    transition: box-shadow var(--animation-timing-sm) ease-out;
+}
+.button.modded:hover, .button.modded:focus {
+    box-shadow: 6px 6px 0 var(--skyblue),
+    10px 10px 0 var(--violet);
 }

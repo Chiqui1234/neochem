@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-dev: false
+dev: true
 title: Neochem
 slogan: Colorantes y auxiliares
 email: your-email@example.com
