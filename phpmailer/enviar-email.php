@@ -17,15 +17,15 @@ if( !$_COOKIE['emailBlocker'] ) {
         $mail->SMTPAutoTLS = false; // Enable/disable SSL/TLS
         $mail->SMTPSecure = false; // Enable/disable SSL/TLS
         $mail->SMTPAuth = true;
-        $mail->Username = '6f2597156ab75c36a3d751b0bed5e71d';
-        $mail->Password = 'b0290be458c4e0af97a74fa2ff0cdb6c';
+        $mail->Username = 'yourUsername';
+        $mail->Password = 'yourPassword';
         $mail->Port = 587;
         // Encoding
         $mail->CharSet = 'UTF-8';
         $mail->Encoding = 'base64';
         // Mail
-        $mail->setFrom('web@neochem.com.ar', 'Neochem Web');
-        $mail->addAddress('santiagogimenez@outlook.com.ar', 'Santiago Gimenez');
+        $mail->setFrom('example@neochem.com.ar', 'Neochem Web');
+        $mail->addAddress('example@outlook.com', 'Santiago Gimenez');
         $mail->Subject = $_POST['name'].' te contactó por la web';
         $mail->isHTML(true);
         $mail->Body = '<head>
